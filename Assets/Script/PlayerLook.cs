@@ -22,7 +22,7 @@ public class PlayerLook : MonoBehaviour
         xRotation -= mouseY;
         yRotation += mouseX;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Kein Genickbruch
-        yRotation = Mathf.Clamp(yRotation, -90f, 90f); 
+        yRotation = Mathf.Clamp(yRotation, -180f, 180f); 
 
         transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
